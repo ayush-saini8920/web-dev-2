@@ -95,46 +95,46 @@
 // }).then
 
 
-// function prepareFood(){
-//     return new Promise (function(resolve,reject){
-//        setTimeout(() => {
-//         console.log("Food Ordered")
-//         resolve("Food Ordered")
-//        }, 1000);
-//     })
-// }
+function prepareFood(){
+    return new Promise (function(resolve,reject){
+       setTimeout(() => {
+        console.log("Food Ordered")
+        resolve("Food Ordered")
+       }, 1000);
+    })
+}
 
-// function prepareFood(){
-//     return new Promise (function(resolve,reject){
-//        setTimeout(() => {
-//         console.log("Food Prepared")
-//         resolve("Food Prepared")
-//        }, 1000);
-//     })
-// }
+function prepareFood(){
+    return new Promise (function(resolve,reject){
+       setTimeout(() => {
+        console.log("Food Prepared")
+        resolve("Food Prepared")
+       }, 1000);
+    })
+}
 
-// function deliverFood(){
-//     return new Promise (function(resolve,reject){
-//        setTimeout(() => {
-//         console.log("Food Delivered")
-//         resolve("Food Delivered")
-//        }, 1000);
-//     })
-// }
+function deliverFood(){
+    return new Promise (function(resolve,reject){
+       setTimeout(() => {
+        console.log("Food Delivered")
+        resolve("Food Delivered")
+       }, 1000);
+    })
+}
 
-// orderFood().then((data)=>{
-//     console.log(data)
-//     return deliverFood()
-// }).catch((data)=>{
-//  console.log(err)
-// })
-// async function order(){
-//     const data = await orderFood()
-//     console.log(data)
-//     await prepareFood()
-//     await deliverFood()
-// }
-// order()
+orderFood().then((data)=>{
+    console.log(data)
+    return deliverFood()
+}).catch((data)=>{
+ console.log(err)
+})
+async function order(){
+    const data = await orderFood()
+    console.log(data)
+    await prepareFood()
+    await deliverFood()
+}
+order()
 // console.log("First Line")
 // console.log(sample)
 // console.log("last line")
@@ -154,15 +154,15 @@
 // }
 // console.log("last line")
 
-async function getData(){
-try{
- const response = await fetch("https://dummyjson.com/products")
- console.log(response.ok)
- if(response.ok===false)throw new Error("Data not found")
-  const data = await response.json()
-  console.log(data)
-}catch(error){
-    console.log("Data not found")
-}
-}
-getData()
+// async function getData(){
+// try{
+//  const response = await fetch("https://dummyjson.com/products")
+//  console.log(response.ok)
+//  if(response.ok===false)throw new Error("Data not found")
+//   const data = await response.json()
+//   console.log(data)
+// }catch(error){
+//     console.log("Data not found")
+// }
+// }
+// getData()
