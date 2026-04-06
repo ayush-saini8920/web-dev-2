@@ -1,15 +1,18 @@
-import React from 'react'
+import React,{useState} from 'react'
 
-const homePage = () => {
-    const [login,setLogin] = useState(false)
-    if(login){
-        return
-    }
-    return (
-    <div>
-      
-    </div>
+function HomePage() {
+    const [login, setLogin] = useState(false)
+  if(login){
+    return<><button onClick={()=>setLogin(false)}>Logout</button></>
+  }else{
+    return<><button onClick={()=>setLogin(true)}>Login</button></>
+  }
+
+  return (
+    <>
+    {login?<button onClick={()=>setLogin(false)}>Logout</button>:<button onClick={()=>setLogin(true)}>Login</button>}
+    </>
   )
 }
 
-export default homePage
+export default HomePage

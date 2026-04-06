@@ -4,6 +4,8 @@ function Sample(props) {
     const [name,setName]=useState("Devendra")
     const [age,setAge]=useState(20)
 
+    
+
   return (
     <div>
       <h2>Trending topics</h2>
